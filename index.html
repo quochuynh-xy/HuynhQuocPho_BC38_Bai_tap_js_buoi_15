@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập JS buổi 15</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- exam1 -->
+    <section class="exam1 container text-center my-3 justify-content-center">
+      <div class="row">
+        <h2>Tính Điểm tuyển sinh</h2>
+        <div class="col-4">
+          <p>Điểm môn thi thứ nhất</p>
+          <input
+            id="testScore1"
+            type="number"
+            class="ps-2"
+            placeholder="Điểm môn thứ nhất"
+          />
+        </div>
+        <div class="col-4">
+          <p>Điểm môn thi thứ hai</p>
+          <input
+            id="testScore2"
+            type="number"
+            class="ps-2"
+            placeholder="Điểm môn thứ hai"
+          />
+        </div>
+        <div class="col-4">
+          <p>Điểm môn thi thứ ba</p>
+          <input
+            id="testScore3"
+            type="number"
+            class="ps-2"
+            placeholder="Điểm môn thứ ba"
+          />
+        </div>
+        <div class="col-4">
+          <p>Khu vực ưu tiên</p>
+          <select name="" id="priorityArea">
+            <option value="0">Không thuộc KV ưu tiên</option>
+            <option value="2">Khu vực A + 2 điểm</option>
+            <option value="1">Khu vực B + 1 điểm</option>
+            <option value="0.5">Khu vực C + 0.5 điểm</option>
+          </select>
+        </div>
+        <div class="col-4">
+          <p>Đối tượng ưu tiên</p>
+          <select name="" id="priorityPerson">
+            <option value="0">---Bình thường: + 0đ---</option>
+            <option value="2.5">Đối tượng 1: + 2.5đ</option>
+            <option value="1.5">Đối tượng 2: + 1.5đ</option>
+            <option value="1">Đối tượng 3: + 1.0đ</option>
+          </select>
+        </div>
+        <div class="col-4">
+          <p>Điểm chuẩn</p>
+          <input
+            id="passExam"
+            type="number"
+            class="ps-2"
+            placeholder="Điểm chuẩn"
+          />
+        </div>
+        <div class="col-6 my-3 mx-auto">
+          <button onclick="handleTotalScore()" class="px-5">xem kết quả</button>
+          <p id="isPassExam" class="my-2 text-white">
+            Nhập điểm và nhấn xem kết quả
+          </p>
+        </div>
+      </div>
+      <hr>
+    </section>
+    <!-- exam2 -->
+    <section class="container my-3 py-3 w-50 text-center">
+      <div class="my-2">
+        <h2>Tính tiền điện</h2>
+        <p>Nhập tên khách hàng và số KWh đã sử dụng</p>
+        <input
+          id="elec_UserName"
+          class="ps-2 me-4"
+          type="text"
+          placeholder="Tên khách hàng"
+        />
+        <input
+          id="elec_KWUsed"
+          class="ps-2"
+          type="number"
+          placeholder="Số điện đã dùng"
+        />
+      </div>
+      <button
+        onclick="handleElectricBill()"
+        id="caculateElectricbill"
+        class="px-5"
+      >
+        tính tiền
+      </button>
+      <p id="elec_TotalBill" class="my-2">Nhập dữ liệu và nhấn tính tiền</p>
+      <hr>
+    </section>
+    <!-- Bootstrap -->
+    <script src="./js/exam.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <footer class="footer"></footer>
+  </body>
+</html>
